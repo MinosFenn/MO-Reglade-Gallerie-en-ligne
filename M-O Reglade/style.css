@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* images  */
+
+.portfolio {
+    background-color: #ffffff;
+    padding: 60px 15px;
+}
+
+.portfolio .section-title {
+margin-bottom: 60px;
+flex-basis: 100%;
+max-width: 100%;
+}
+
+.portfolio .section-title h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+    color: #000000
+}
+
+.portfolio .portfolio-items{
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio .portfolio-items .item{
+flex-basis: calc(33.33% - 30px);
+max-width: calc(33.33% - 30px);
+margin-bottom: 30px;
+position: relative;
+}
+
+.portfolio .portfolio-items .item img {
+    width: 100%;
+    display: block;
+}
+
+.portfolio .portfolio-items .item .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.portfolio .portfolio-items .item:hover .overlay {
+transform: scale(0.9);
+opacity: 1;
+}
+
+
+.portfolio .portfolio-items .item .overlay h2{
+font-size: 24px;
+color: #ffffff;
+margin: 30px 0;
+font-weight: 700;
+}
+
+.portfolio .portfolio-items .item .overlay .fa {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+
+}
+
+/* lightbox */
+
+.lightbox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+
+}
+
+.lightbox.open{
+    display:flex;
+}
+
+.lightbox .lightbox-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 1000px;
+    padding: 40px 0;
+    cursor: pointer;
+    animation: lightbImage ease-in-out 0.5s;
+}
+@keyframes lightbImage{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.lightbox .lightbox-content {
+    position: relative;
+}
+
+.lightbox .lightbox-close {
+position: absolute;
+z-index: 101;
+right: 0;
+top: 0;
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 40px;
+color: #ffffff;
+cursor: pointer;
+font-size: 30px;
+
+}
+
+
+
+.lightbox .lightbox-caption {
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.lightbox .lightbox-controls div{
+    position: absolute;
+    top:50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin-top: -20px;
+    line-height: 36px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: #ffffff;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: all .5s ease-in-out;
+}
+
+.lightbox .lightbox-controls div:hover{
+background-color: #ffffff;
+}
+
+.lightbox .lightbox-controls div.prev{
+    left: 30px;
+    }
+
+    
+.lightbox .lightbox-controls div.next{
+    right: 30px;
+
+    }
+
+    @media(max-width:991px){
+    .portfolio .portfolio-items .item{
+        flex-basis: calc(50% - 30px);
+        max-width: calc(50% - 30px);
+
+    }
+}
+
+@media(max-width:575px){
+    .portfolio .portfolio-items .item{
+        flex-basis: calc(100% - 30px);
+        max-width: calc(100% - 30px);
+
+    }
+}
+
+/* menu */
+
+#rc_logo {
+    left: 30px;
+    padding: 17px 0px 0px 22px;
+    position: absolute;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    margin-right: 50px;
+
+   }
+   
+   #rc_logo a { 
+   color: inherit; 
+   text-decoration: none;
+   } 
+   
+   .rc_nav {
+     overflow: hidden;
+     background-color: #ffffff;
+     margin-bottom: 25px;
+     text-align: right;
+     z-index: 6;
+   }
+   
+   .rc_nav a {
+    display: inline-block;
+    margin-right: -4px;  /* inline-block gap fix */
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-color: black;
+    padding: 16px 24px;
+    margin: 36px 24px 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    -webkit-transition: background 0.3s linear;
+    -moz-transition: background 0.3s linear;
+    -ms-transition: background 0.3s linear;
+    -o-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+    z-index: 9;
+   }
+   
+   .rc_nav a:hover {
+     background-color: #000000;
+     color: #ffffff;
+   }
+
+.rc_nav a.active {
+    background-color: #000000;
+    color: #ffffff;
+
+  }
+   
+   .rc_nav .icon {
+     display: none;
+   }
+
+   /* added list */
+
+
+
+  /* end of added list */
+   
+   .rc_content {
+     text-align: center; 
+     padding-left:14px; 
+     margin-top: 100px;  
+     color: #8e909b;
+   }
+   
+   
+   @media screen and (max-width: 1220px) {
+
+     .rc_nav a {display: none;}
+     .rc_nav a.icon {
+       float: right;
+       display: block;
+       width: 60px;
+     }
+   }
+   
+   @media screen and (max-width: 1220px) {
+     .rc_nav.responsive {position: relative; top: 120px;}
+     .rc_nav.responsive .icon {
+       position: fixed;
+       right: 0;
+       top: 0;
+     }
+     .rc_nav.responsive a {
+       float: none;
+       display: block;
+       text-align: center;
+     }
+   
+   }
+
+/* Navigateur scroolbar */
+
+/* customize navigator scrollbar  */
+
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(228, 228, 228);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+}
