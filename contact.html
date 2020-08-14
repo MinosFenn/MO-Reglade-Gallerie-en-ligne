@@ -1,20 +1,66 @@
-<form name="contact" method="POST" data-netlify="true">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact page</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <!-- Menu -->
+  <div id="rc_logo">
+    <a href="/" title="Logo"> <img src="Images/Logo-MO.png" alt=""></a> <!-- Swap this placeholder out for your logo image -->
+    </div>  
+    
+    <div class="rc_nav" id="centered_nav">
+
+    <a href="dessin.html" title="Dessin">Dessin</a>
+    <a href="Acrylique.html" title="Acrylique">Acrylique</a>
+    <a href="Huile.html" title="Huile">Huile</a>
+    <a href="Pastel.html" title="Pastel">Pastel</a>
+    <a href="Biographie.html" title="Biographie">Biographie</a>
+    <a href="Contact.html" title="Contact">Contact</a>
+</ul>
+    <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+  <!-- contact form -->
+  <div class="contactTitle"><h1>Mes informations de contact:</h1></div>
+  <div class="container-grid">
+    <div class="content" id="content1">
+  <h2>Marie-Odile Réglade</h2>
+<p>91 rue de la Tour 75116 Paris </p>
+<p>45 avenue de Picardie 62520 Le Touquet Paris Plage </p>
+
+<p>tel : 06 22 86 61 57</p>               
+
+<p>email : moreglade@yahoo.fr</p></div>
+                         
+<div class="content" id="content1">
+  <form name="contact" method="POST" data-netlify="true">
     <p>
-      <label>Your Name: <input type="text" name="name" /></label>   
+      <label>Prénom et Nom:<br> <input type="text" name="name" /></label>   
     </p>
     <p>
-      <label>Your Email: <input type="email" name="email" /></label>
+      <label>Votre adresse email:<br> <input type="email" name="email" /></label>
     </p>
     <p>
-      <label>Your Role: <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select></label>
+      <label>Votre numéro de téléphone:<br> <input type="phone" name="phone" /></label>
+    </p>
+  
+    <p>
+      <label>Votre message:<br> <textarea name="message"></textarea></label>
     </p>
     <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
+      <div data-netlify-recaptcha="true"></div>
+      <button type="submit" class="button">envoyer</button>
     </p>
   </form>
+</div>
+</div>
+</body>
+</html>
+
