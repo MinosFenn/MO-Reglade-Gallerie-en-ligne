@@ -1,0 +1,75 @@
+<head>
+  <meta charset="UTF-8">
+  <html lang="fr">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="js/smallScreenMenu.js"></script>
+
+  <title>Contacter Marie Odile Reglade </title>
+  <meta name="description" content="Retrouvez toutes les acryliques de Marie-Odile Reglade">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-96x96.png">
+
+
+</head>
+<body>
+  <!-- Menu -->
+  <div id="rc_logo">
+    <a href="/" title="Logo"> <img src="Images/Logo-MO.png" alt=""></a> <!-- Swap this placeholder out for your logo image -->
+    </div>  
+    
+    <div class="rc_nav" id="centered_nav">
+
+    <a href="dessin.html" title="Dessin">Dessin</a>
+    <a href="Acrylique.html" title="Acrylique">Acrylique</a>
+    <a href="Huile.html" title="Huile">Huile</a>
+    <a href="Pastel.html" title="Pastel">Pastel</a>
+    <a href="Biographie.html" title="Biographie">Biographie</a>
+    <a href="Contact.html" title="Contact">Contact</a>
+</ul>
+    <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+  <!-- contact form -->
+  <div class="contactTitle"><h1>Mes informations de contact:</h1></div>
+  <div class="container-grid">
+    <div class="content" id="content1">
+  <h2>Marie-Odile Réglade</h2>
+<p>91 rue de la Tour 75116 Paris </p>
+<p>45 avenue de Picardie 62520 Le Touquet Paris Plage </p>
+
+<p>tel : 06 22 86 61 57</p>               
+
+<p>email : moreglade@yahoo.fr</p></div>
+
+<div class="content" id="content1">
+  <h2>Formulaire de contact</h2>                        
+
+  <form name="contact" method="POST" data-netlify="true">
+    <p>
+      <label>Prénom et Nom:<br> <input type="text" name="name" /></label>   
+    </p>
+    <p>
+      <label>Votre adresse email:<br> <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <label>Votre numéro de téléphone:<br> <input type="phone" name="phone" /></label>
+    </p>
+  
+    <p>
+      <label>Votre message:<br> <textarea name="message"></textarea></label>
+    </p>
+    <p>
+      <div data-netlify-recaptcha="true"></div>
+      <button type="submit" class="button">envoyer</button>
+    </p>
+  </form>
+</div>
+</div>
+</body>
+</html>
+

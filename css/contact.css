@@ -1,0 +1,52 @@
+.container-grid {
+    justify-items: center;
+    justify-content: center;
+margin: auto;
+    display: grid;
+    width: 50vw;
+    height: 35vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "content1"
+    "content2"
+
+}
+
+.button{
+    border: 2px solid black;
+    background-color: white;;
+    padding: 10px;
+}
+
+.contactTitle {
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 5px solid black;
+
+}
+h1 {
+    font-size: 40px;
+}
+.content {
+    margin: 10px 10px 10px 10px;
+    padding: 2px;
+    height: 50vh;
+
+}
+
+@media only screen and (max-width: 700px) {
+    .container-grid {
+        width: 70vw;
+        height: 50vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr;
+        grid-template-areas: 
+        "content1"
+        "content2";
+    }
+    .content {
+        height: 30vh;
+    }
+}
