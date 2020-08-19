@@ -37,10 +37,18 @@ body {
 }
 
 .image {
-    padding: 0px 150px 50px 50px;
+    margin: 0px 150px 50px 50px;
     width: 15vw;
     height: auto;
-    /* cursor: zoom-in; */
+    cursor: zoom-in;
+    transition: .5s ease-in-out;
+}
+
+.image:hover {
+  box-shadow: 0 0 6px rgba(33,33,33,.3); 
+  transition: .3s ease-in-out;
+
+
 }
 
 @media screen and (max-width: 1280px) {
