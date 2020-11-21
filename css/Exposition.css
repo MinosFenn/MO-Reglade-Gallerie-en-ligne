@@ -1,5 +1,5 @@
 .row-slider {
-    margin:00px;
+    margin:0px;
     display: grid;
     height: 75%;
     border-bottom: 2px solid black;
@@ -13,6 +13,11 @@
 
 .title-s2 {
     margin-left: 50px;
+}
+
+.content h2 {
+    font-size: 10em;
+    margin: 0px;
 }
 
 .img-area-exp {
@@ -64,6 +69,12 @@
         height:40vh;
     }
   
+    
+.content h2 {
+    font-size: 7em;
+    margin: 0px;
+}
+
     .image-exp {
         width: 15vw;
         
@@ -76,7 +87,10 @@
           width: 80%;
           height:55vh;
       }
-  
+      .content h2 {
+        font-size: 5em;
+        margin: 0px;
+    }
       .image-exp {
           width: 25vw;
       }
@@ -86,7 +100,10 @@
       .img-area-exp {
           width: 100%;
       }
-  
+      .content h2 {
+        font-size: 3em;
+        margin: 20px;
+    }
       .image-exp {
           width: 65vw;
       }
