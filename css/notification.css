@@ -1,0 +1,24 @@
+div {
+    padding:5px;
+    margin:5px;
+  }
+  div#notification {
+    border:1px solid rgba(0, 0, 0, 0.082);
+    background: rgba(204, 204, 204, 0.397);
+    box-shadow: 3px 3px 3px rgba(20, 20, 20, 0.198);
+    font-weight: bold;
+    width:220px;
+    text-align: center;
+    border-radius: 25px;;
+  }
+  .fixed { position:absolute; }
+  .top   { bottom:50px; }
+  .right { right:10px; }
+  
+  .animate {
+    animation: animFromRight 0.5s 1;
+  }
+  @keyframes animFromRight {
+    from { right: -150px; }
+    to   { right:10px; }
+  }
